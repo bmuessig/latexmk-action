@@ -62,21 +62,6 @@ jobs:
           filename: article.tex
 ```
 
-## Keep up-to-date with GitHub Dependabot
-
-[GitHub Actions has native support](https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates#package-ecosystem) for [Dependabot](https://docs.github.com/en/github/administering-a-repository/keeping-your-actions-up-to-date-with-github-dependabot),
-to enable it on your GitHub repository all you need to do is add the `.github/dependabot.yml` file:
-
-```yaml
----
-version: 2
-updates:
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: daily
-```
-
 ## Limitation
 
 This action is only available for Linux [virtual environments](https://help.github.com/en/articles/virtual-environments-for-github-actions#supported-virtual-environments-and-hardware-resources).

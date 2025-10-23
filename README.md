@@ -1,5 +1,7 @@
 # latexmk-action
 
+Adapted for personal use from the original at <https://github.com/hspaans/latexmk-action>.
+
 ## Usage
 
 This GitHub Action run latexmk to convert a LaTeX file into a PDF.
@@ -32,7 +34,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.1.0
+        uses: bmuessig/latexmk-action@v2.1.0
         with:
           format: pdf
           filename: article.tex
@@ -55,7 +57,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.1.0
+        uses: bmuessig/latexmk-action@v2.1.0
         with:
           filename: article.tex
 ```

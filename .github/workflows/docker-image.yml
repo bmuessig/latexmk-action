@@ -54,7 +54,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
+          username: bmuessig
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
@@ -64,7 +64,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           file: Dockerfile
-          tags: ghcr.io/hspaans/latexmk-action:2.1
+          tags: ghcr.io/bmuessig/latexmk-action:2.1
           outputs: |
             type=image
             name=target

@@ -1,13 +1,12 @@
 FROM docker.io/debian:13.1-slim
 
 LABEL org.opencontainers.image.description="LaTeX container for GitHub Action latexmk"
-LABEL org.opencontainers.image.source=https://github.com/hspaans/latexmk-action
+LABEL org.opencontainers.image.source=https://github.com/bmuessig/latexmk-action
 
 # Avoid warnings by switching to noninteractive
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Configure apt and install packages
-# hadolint ignore=DL3008
 RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     # Install texlive-full
